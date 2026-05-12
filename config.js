@@ -14,12 +14,12 @@
  *   FRAME_COUNT  : Number of overlay frames in assets/frames/ (frame_1.png ... frame_N.png)
  */
 window.PHOTOBOOTH_CONFIG = {
-  GAS_POST_URL: "REPLACE_WITH_YOUR_APPS_SCRIPT_WEBAPP_URL",
+  GAS_POST_URL: "https://script.google.com/macros/s/AKfycby5_1AZA4edf8Objlu_9QqmfSl8hLHy0YMEEkM8dYO_8V423kvVka5it5uNp9Jy9-WV/exec",
 
   EVENT_NAME:   "Farmer Fest",
   SCHOOL_NAME:  "Lewisville High School • Killough",
   FROM_NAME:    "LHS Farmer Fest Photobooth",
-  REPLY_TO:     "", // optional – e.g. "farmerfest@lewisvilleisd.net"
+  REPLY_TO:     "photobooth@nexaflowdigital.com",
 
   FRAME_COUNT:  8,
 
