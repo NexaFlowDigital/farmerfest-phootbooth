@@ -14,7 +14,7 @@
  *   FRAME_COUNT  : Number of overlay frames in assets/frames/ (frame_1.png ... frame_N.png)
  */
 window.PHOTOBOOTH_CONFIG = {
-  GAS_POST_URL: "REPLACE_WITH_YOUR_APPS_SCRIPT_WEBAPP_URL",
+  GAS_POST_URL: "https://script.google.com/macros/s/AKfycbz2sHmNs-DLEvCmLqoP_MCtuaUGNqoArQY_dm7HtoJaxf6DPyoISABzKlsikidDXTLq/exec",
 
   EVENT_NAME:   "Farmer Fest",
   SCHOOL_NAME:  "Lewisville High School • Killough",
