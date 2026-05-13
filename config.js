@@ -19,7 +19,7 @@ window.PHOTOBOOTH_CONFIG = {
   EVENT_NAME:   "Farmer Fest",
   SCHOOL_NAME:  "Lewisville High School • Killough",
   FROM_NAME:    "LHS Farmer Fest Photobooth",
-  REPLY_TO:     "", // optional – e.g. "farmerfest@lewisvilleisd.net"
+  REPLY_TO:     "photobooth@nexaflowdigital.com",
 
   FRAME_COUNT:  8,
 
