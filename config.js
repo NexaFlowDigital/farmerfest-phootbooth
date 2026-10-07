@@ -11,7 +11,8 @@
  *   FROM_NAME    : Name your emails are sent "from" (in Gmail).
  *   REPLY_TO     : Reply-to email address.
  *
- *   FRAME_COUNT  : Number of overlay frames in assets/frames/ (frame_1.png ... frame_N.png)
+ *   FRAME_NUMBERS: List of overlay frame numbers in assets/ (frame_1.png, frame_2.png, ...)
+ *                  Add or remove numbers here to match the files you uploaded.
  */
 window.PHOTOBOOTH_CONFIG = {
   GAS_POST_URL: "https://script.google.com/macros/s/AKfycbx92ToglqNydn4izuW85MWz4yATSBvTc_pN7T0XckON46YvyEzP7RSCWX1H0lBEhZrm/exec",
@@ -21,7 +22,7 @@ window.PHOTOBOOTH_CONFIG = {
   FROM_NAME:    "LHS Farmer Fest Photobooth",
   REPLY_TO:     "photobooth@nexaflowdigital.com",
 
-  FRAME_COUNT:  8,
+  FRAME_NUMBERS: [1, 2, 3, 4, 5, 6, 8, 9, 10],
 
   /* Idle reset: after this many ms with no interaction on the result screen,
      return to the attract screen (mall-photobooth behavior). 0 = disabled. */
