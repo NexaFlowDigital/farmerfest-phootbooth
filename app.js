@@ -14,7 +14,9 @@
   const GAS_POST_URL = (CONFIG.GAS_POST_URL || "").trim();
   const EVENT_NAME   = CONFIG.EVENT_NAME   || "Farmer Fest";
   const SCHOOL_NAME  = CONFIG.SCHOOL_NAME  || "Lewisville High School";
-  const FRAME_COUNT  = Number(CONFIG.FRAME_COUNT || 8);
+  const FRAME_NUMBERS = Array.isArray(CONFIG.FRAME_NUMBERS) && CONFIG.FRAME_NUMBERS.length
+    ? CONFIG.FRAME_NUMBERS
+    : Array.from({ length: Number(CONFIG.FRAME_COUNT || 8) }, (_, i) => i + 1);
   const IDLE_RESET_MS= Number(CONFIG.IDLE_RESET_MS || 0);
 
   // ============================== DOM ==============================
@@ -86,10 +88,10 @@
   const BOOM_FPS            = 20;
   const BOOM_EXPORT_MS      = 3000;
 
-  // Build the frame list: frame_1.png ... frame_N.png in /assets/frames/
-  const FRAMES = Array.from({ length: FRAME_COUNT }, (_, i) => ({
-    name: `Design ${i + 1}`,
-    src : `assets/frames/frame_${i + 1}.png`
+  // Build the frame list from FRAME_NUMBERS: assets/frame_1.png, assets/frame_2.png, ...
+  const FRAMES = FRAME_NUMBERS.map(n => ({
+    name: `Frame ${n}`,
+    src : `assets/frame_${n}.png`
   }));
 
   // Brand colors for canvas drawing
@@ -1110,5 +1112,5 @@
   setScreen(screenAttract);
 
   // Friendly warning if frames are missing
-  console.log(`[Farmer Fest Photobooth] Expecting ${FRAME_COUNT} frames at assets/frames/frame_1.png .. frame_${FRAME_COUNT}.png`);
+  console.log(`[Farmer Fest Photobooth] Expecting ${FRAMES.length} frames: ${FRAMES.map(f => f.src).join(", ")}`);
 })();
